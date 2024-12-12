@@ -23,7 +23,6 @@ class ECDHE:
 
 # Encrypts a plaintext message using AES-GCM
 def aes_gcm_encrypt(session_key, plaintext):
-    """Encrypts a plaintext message using AES-GCM."""
     key = bytes.fromhex(session_key)  # Convert session key from hex to bytes
     nonce = os.urandom(12)  # Generate a random 12-byte nonce
     aesgcm = AESGCM(key)
